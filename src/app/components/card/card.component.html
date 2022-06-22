@@ -1,0 +1,15 @@
+<div class="card mt-4">
+  <div class="card-header text-center">
+    <h4 class="card-title">{{ dataCountry.name.common}}</h4>
+    <p class="card-title"> ( {{ dataCountry.name.official }} )<p>
+    <img [src]="dataCountry.flags.png" class="rounded size" alt="image" />
+  </div>
+  <div class="card-body">
+    <p> <strong>Capital: </strong> {{ dataCountry.capital }} </p>
+    <p> <strong>Abbreviation: </strong> {{ dataCountry.cca3 }} </p>
+    <p> <strong>Population: </strong> {{ dataCountry.population }} </p>
+  </div>
+  <div class="card-footer text-center">
+    <small>{{ dataCountry.continents }}</small>
+  </div>
+</div>
