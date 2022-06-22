@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CountriesService } from '../../@core/services/countries.service';
 import { Country } from '../../@core/interfaces/Country';
 
@@ -7,11 +7,13 @@ import { Country } from '../../@core/interfaces/Country';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
   dataCountries: Country;
   error: string;
 
-  constructor(private countriesService: CountriesService) {
+  constructor(private countriesService: CountriesService) {}
+
+  ngOnInit(): void {
     this.getCountries();
   }
 
